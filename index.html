@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA SERUM - 肌に、静かな輝きを。</title>
+    <meta name="description" content="忙しい毎日に、肌をいたわる上質な一滴。3〜40代の女性に向けた、みずみずしい美容液「LUMINA SERUM（ルミナセラム）」。">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-ivory': '#FAF8F5',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-light': '#E8CE73',
+                        'brand-charcoal': '#333333',
+                        'brand-gray': '#777777',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    letterSpacing: {
+                        'widest-xl': '0.15em',
+                        'widest-2xl': '0.2em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for nuances Tailwind can't easily handle inline */
+        body {
+            color: #333333;
+            background-color: #FAF8F5;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delicate gold underline effect */
+        .heading-underline::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: #D4AF37;
+            margin: 24px auto 0;
+        }
+
+        /* Floating animation for the hero bottle */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-charcoal leading-relaxed antialiased selection:bg-brand-gold-light selection:text-white overflow-x-hidden">
+
+    <header class="fixed w-full top-0 z-50 bg-brand-ivory/90 backdrop-blur-sm border-b border-white transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl tracking-widest text-brand-charcoal">LUMINA</a>
+            <a href="#buy" class="text-sm border border-brand-gold text-brand-gold px-4 py-2 rounded-full hover:bg-brand-gold hover:text-white transition-colors duration-300">ご購入はこちら</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-brand-ivory via-white to-brand-ivory">
+        <div class="absolute inset-0 z-0">
+            <!-- Simulated light rays/caustics background -->
+            <div class="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-bl from-white/60 to-transparent transform rotate-12 origin-top-right"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 flex flex-col md:flex-row items-center justify-between">
+            
+            <!-- Text Content -->
+            <div class="md:w-1/2 pt-20 md:pt-0 text-center md:text-left fade-in-up">
+                <p class="font-serif tracking-widest-xl text-brand-gold mb-4 text-sm md:text-base">LUMINA SERUM</p>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight tracking-widest mb-8 text-brand-charcoal">
+                    肌に、<br class="hidden md:block">静かな輝きを。
+                </h1>
+                <p class="text-brand-gray mb-10 leading-loose text-sm md:text-base tracking-wide">
+                    乾燥しがちな毎日に、上質なうるおいを。<br>
+                    朝も夜も心地よく使える、みずみずしい美容液。
+                </p>
+                
+                <a href="#buy" class="inline-block bg-brand-charcoal text-white font-medium px-10 py-4 rounded-sm tracking-widest hover:bg-black transition-colors duration-300 shadow-lg shadow-black/10">
+                    LUMINA SERUMを試す
+                </a>
+                <p class="text-xs text-brand-gray mt-4 tracking-wide">送料無料 / 30日間返金保証</p>
+            </div>
+
+            <!-- Hero Image Placeholders (To be replaced by AI generated image) -->
+            <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center fade-in-up delay-200">
+                <!-- Using a placeholder that simulates the frosted glass bottle -->
+                <div class="relative w-64 h-96 md:w-80 md:h-[30rem] bg-white/40 backdrop-blur-md rounded-t-full rounded-b-md border border-white/60 shadow-2xl flex items-center justify-center animate-float overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" alt="Beautiful smiling woman" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1200/FAF8F5/333333?text=Smiling+Woman'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 fade-in-up">
+            <h2 class="font-serif text-2xl md:text-3xl text-center tracking-widest mb-16 heading-underline">
+                年齢とともに、<br class="md:hidden">こんなサインを感じていませんか？
+            </h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Image Placeholder -->
+                <div class="w-full md:w-1/2 aspect-square md:aspect-auto md:h-96 bg-brand-ivory rounded-sm relative overflow-hidden flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?auto=format&fit=crop&q=80&w=800" alt="Beautiful smiling woman" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x800/FAF8F5/333333?text=Smiling+Woman'">
+                </div>
+
+                <div class="w-full md:w-1/2">
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-gold mt-1 mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-brand-charcoal tracking-wide leading-relaxed">夕方になると、鏡に映る自分の顔がくすんで見える<span class="text-xs text-brand-gray">（※乾燥による）</span></span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-gold mt-1 mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-brand-charcoal tracking-wide leading-relaxed">しっかり保湿しているつもりなのに、すぐカサつく</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-gold mt-1 mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-brand-charcoal tracking-wide leading-relaxed">うるおい不足で、メイクのノリがいまいち</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-gold mt-1 mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-brand-charcoal tracking-wide leading-relaxed">忙しくて、丁寧なスキンケアに時間をかけられない</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-12 p-6 bg-brand-ivory border-l-2 border-brand-gold">
+                        <p class="font-serif text-lg leading-loose tracking-wide">
+                            変化を感じる肌に必要なのは、<br>
+                            複雑なステップではなく、<br class="md:hidden">確かな「うるおい」でした。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-brand-ivory relative overflow-hidden">
+        <!-- Abstract water ripple background elements -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-full opacity-30 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-gold-light/20 rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10 fade-in-up">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl leading-tight tracking-widest mb-6">
+                    満たされる、上質な一滴。<br>
+                    毎日のスキンケアを「リトリート」へ。
+                </h2>
+                <p class="text-brand-gray leading-loose max-w-2xl mx-auto tracking-wide">
+                    LUMINA SERUMは、忙しい現代女性のために生まれました。<br>
+                    水のように軽やかなのに、角質層のすみずみまで浸透。<br>
+                    うるおいで満たし、キメの整ったみずみずしい肌へ導きます。
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                <!-- Features List Left -->
+                <div class="w-full md:w-1/3 space-y-12 order-2 md:order-1 text-center md:text-right">
+                    <div>
+                        <h3 class="font-serif text-xl tracking-widest text-brand-gold mb-3">01. 潤いを守る</h3>
+                        <p class="text-sm leading-relaxed text-brand-gray tracking-wide">
+                            3種のセラミド（※1）配合。<br>乾燥ダメージから肌を保護し、健やかに保ちます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Center Image Placeholder (Water/Bottle macro) -->
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white shadow-[0_0_40px_rgba(212,175,55,0.15)] flex items-center justify-center relative order-1 md:order-2 border-8 border-brand-ivory z-10 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=800" alt="Beautiful smiling woman" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x800/FAF8F5/333333?text=Smiling+Woman'">
+                </div>
+
+                <!-- Features List Right -->
+                <div class="w-full md:w-1/3 space-y-12 order-3 text-center md:text-left">
+                    <div>
+                        <h3 class="font-serif text-xl tracking-widest text-brand-gold mb-3">02. 軽やかな使い心地</h3>
+                        <p class="text-sm leading-relaxed text-brand-gray tracking-wide">
+                            すっと馴染んでベタつかない、<br>独自のウォーター・ヴェール処方。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl tracking-widest text-brand-gold mb-3">03. 24時間寄り添う</h3>
+                        <p class="text-sm leading-relaxed text-brand-gray tracking-wide">
+                            朝のメイク前も、夜の集中ケアも、<br>これ1本で心地よく完了。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-brand-gray text-center mt-12 tracking-wide">※1 保湿成分：セラミドNP、セラミドNG、セラミドAP</p>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Image Placeholder Left (Flatlay) -->
+                <div class="w-full md:w-1/2 h-[400px] md:h-[600px] bg-brand-ivory relative flex items-center justify-center fade-in-up overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" alt="Beautiful smiling woman" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1200/FAF8F5/333333?text=Smiling+Woman'">
+                </div>
+
+                <!-- Text Right -->
+                <div class="w-full md:w-1/2 pt-16 md:pt-0 md:pl-20 fade-in-up delay-200">
+                    <h2 class="font-serif text-3xl md:text-4xl tracking-widest mb-8 leading-tight">
+                        自然の恵みと、<br>科学の融合。
+                    </h2>
+                    <p class="text-brand-gray leading-loose mb-12 tracking-wide text-sm md:text-base">
+                        肌に直接触れるものだからこそ、選び抜かれた成分を。<br>
+                        LUMINA SERUMは、植物由来の保湿エキスと、肌のバリア機能をサポートする3種のセラミド（※1）を独自ブレンド。<br><br>
+                        とろみがあるのに、肌にのせた瞬間すっとほどけるテクスチャーは、角質層のすみずみまで素早くうるおいを届けるためのこだわりです。
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 border-t border-brand-ivory pt-8">
+                        <div class="text-center">
+                            <div class="w-12 h-12 rounded-full border border-brand-gold mx-auto mb-3 flex items-center justify-center text-brand-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <p class="text-xs font-medium tracking-wide">3種のセラミド<br><span class="text-[10px] text-brand-gray">※1</span></p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 rounded-full border border-brand-gold mx-auto mb-3 flex items-center justify-center text-brand-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <p class="text-xs font-medium tracking-wide">ボタニカルエキス<br><span class="text-[10px] text-brand-gray">※2</span></p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 rounded-full border border-brand-gold mx-auto mb-3 flex items-center justify-center text-brand-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <p class="text-xs font-medium tracking-wide">無添加処方<br><span class="text-[10px] text-brand-gray">※3</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-[10px] text-brand-gray leading-normal space-y-1">
+                        <p>※1 保湿成分：セラミドNP、セラミドNG、セラミドAP</p>
+                        <p>※2 保湿成分：架空の植物エキス名</p>
+                        <p>※3 パラベン・アルコール・合成着色料フリー</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-brand-charcoal text-white relative">
+        <!-- Using a dark background section to contrast with the bright images, creating a 'retreat' feel -->
+        <div class="max-w-5xl mx-auto px-6 relative z-10 fade-in-up">
+            <div class="text-center mb-16">
+                <p class="text-brand-gold tracking-widest-xl text-sm mb-4">HOW TO USE</p>
+                <h2 class="font-serif text-2xl md:text-3xl tracking-widest heading-underline after:bg-brand-gold-light">
+                    朝と夜、洗顔後のまっさらな肌へ。
+                </h2>
+                <p class="text-gray-300 mt-8 tracking-wide">毎日のルーティンが、心安らぐ時間に変わります。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white/5 p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                    <span class="block font-serif text-brand-gold-light text-xl mb-4">Step 01</span>
+                    <p class="text-sm leading-relaxed text-gray-300 tracking-wide">
+                        洗顔後、化粧水で肌を整えた後、スポイトから1〜2滴を手のひらに取ります。
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white/5 p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                    <span class="block font-serif text-brand-gold-light text-xl mb-4">Step 02</span>
+                    <p class="text-sm leading-relaxed text-gray-300 tracking-wide">
+                        両手で少し温めてから、顔全体を包み込むように優しくハンドプレスして馴染ませます。
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white/5 p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                    <span class="block font-serif text-brand-gold-light text-xl mb-4">Step 03</span>
+                    <p class="text-sm leading-relaxed text-gray-300 tracking-wide">
+                        乾燥が気になる目元や口元には少量を重ねづけし、その後乳液やクリームでうるおいを閉じ込めます。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Image Placeholder (Hands & Dropper) -->
+            <div class="mt-16 w-full h-[300px] md:h-[400px] bg-[#1a1a1a] relative flex items-center justify-center border border-white/10 overflow-hidden rounded-sm">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200" alt="Beautiful smiling woman" class="w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/1200x800/1a1a1a/ffffff?text=Smiling+Woman'">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-brand-ivory relative overflow-hidden">
+        <!-- Image Placeholder Background (Abstract/Fabric) -->
+        <div class="absolute inset-0 z-0 bg-[#F0EBE1] flex items-center justify-center opacity-40 overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?auto=format&fit=crop&q=80&w=1600" alt="Beautiful smiling woman background" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1600x900/F0EBE1/333333?text=Smiling+Woman'">
+        </div>
+
+        <div class="max-w-3xl mx-auto px-6 relative z-10 text-center fade-in-up">
+            <h2 class="font-serif text-3xl md:text-4xl tracking-widest mb-12 text-brand-charcoal">
+                肌を整えることは、<br>心を整えること。
+            </h2>
+            
+            <div class="space-y-8 text-brand-charcoal/80 leading-loose tracking-wide text-sm md:text-base">
+                <p>
+                    一日が終わる時、あるいは一日が始まる時。<br>
+                    鏡の前に立つ数分間は、誰の役割も背負わない、<br>
+                    あなただけの「素」に戻る時間であってほしい。
+                </p>
+                <p>
+                    LUMINAが目指したのは、<br>
+                    ただ肌にうるおいを与えるだけでなく、<br>
+                    深呼吸したくなるような心地よさ。<br>
+                    無駄を削ぎ落としたミニマルなボトルは、<br>
+                    あなたのありのままの美しさを引き立てるためのデザインです。
+                </p>
+                <p class="font-serif text-brand-charcoal text-lg mt-8">
+                    私らしく、心地よく、しなやかに。<br>
+                    LUMINA SERUMは、あなたの毎日に静かに寄り添います。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white" id="buy">
+        <div class="max-w-5xl mx-auto px-6 fade-in-up">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-2xl tracking-widest heading-underline">PRODUCT INFO</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-4xl mx-auto border border-brand-ivory p-8 md:p-16">
+                <!-- Isolated Product Image Placeholder -->
+                <div class="w-48 h-64 md:w-64 md:h-80 bg-white shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&q=80&w=800" alt="Beautiful smiling woman" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/ffffff/333333?text=Smiling+Woman'">
+                </div>
+
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2">
+                    <p class="font-serif tracking-widest text-brand-gold text-sm mb-2">美容液</p>
+                    <h3 class="font-serif text-2xl text-brand-charcoal mb-6">LUMINA SERUM <span class="text-base text-brand-gray ml-2">ルミナセラム</span></h3>
+                    
+                    <dl class="space-y-4 text-sm text-brand-charcoal tracking-wide border-y border-brand-ivory py-6 mb-6">
+                        <div class="flex">
+                            <dt class="w-24 text-brand-gray">容量</dt>
+                            <dd>30mL（約1〜1.5ヶ月分）</dd>
+                        </div>
+                        <div class="flex">
+                            <dt class="w-24 text-brand-gray">価格</dt>
+                            <dd class="font-medium text-lg">5,980<span class="text-sm">円</span><span class="text-xs text-brand-gray font-normal">（税込）</span></dd>
+                        </div>
+                        <div class="flex">
+                            <dt class="w-24 text-brand-gray shrink-0">フリー処方</dt>
+                            <dd class="text-xs leading-relaxed">
+                                パラベンフリー・アルコールフリー<br>合成着色料フリー・鉱物油フリー
+                            </dd>
+                        </div>
+                    </dl>
+                    <p class="text-[10px] text-brand-gray mb-8">※すべての方に肌トラブルが起きないわけではありません。</p>
+
+                    <!-- CTA Button inline -->
+                    <a href="#" class="block w-full text-center bg-brand-charcoal text-white font-medium py-4 rounded-sm tracking-widest hover:bg-black transition-colors duration-300 mb-2">
+                        カートに入れる
+                    </a>
+                    <p class="text-center text-xs text-brand-gold">送料無料 / 30日間返金保証</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative overflow-hidden bg-gradient-to-t from-brand-ivory to-white text-center">
+        <!-- Background Caustics Placeholder -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
+             <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-gold-light/20 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-6 relative z-10 fade-in-up">
+            <h2 class="font-serif text-3xl md:text-5xl leading-tight tracking-widest mb-6 text-brand-charcoal">
+                さあ、新しい肌体験へ。
+            </h2>
+            <p class="text-brand-gray leading-loose mb-12 tracking-wide text-sm md:text-base">
+                うるおいに満ちた、静かな輝きをあなたに。
+            </p>
+
+            <a href="#buy" class="inline-block bg-brand-gold text-white font-medium px-12 py-5 rounded-sm tracking-widest hover:bg-brand-gold-light transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] transform hover:-translate-y-1">
+                「LUMINA SERUM」を試してみる
+            </a>
+            <p class="text-sm text-brand-gray mt-6 tracking-wide">送料無料 / 30日間返金保証でお届けします</p>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-brand-ivory py-12 text-center text-brand-gray">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="font-serif tracking-widest text-lg text-brand-charcoal mb-6">LUMINA</p>
+            <ul class="flex flex-wrap justify-center gap-6 text-xs tracking-wide mb-8">
+                <li><a href="#" class="hover:text-brand-gold transition-colors">特定商取引法に基づく表記</a></li>
+                <li><a href="#" class="hover:text-brand-gold transition-colors">プライバシーポリシー</a></li>
+                <li><a href="#" class="hover:text-brand-gold transition-colors">利用規約</a></li>
+                <li><a href="#" class="hover:text-brand-gold transition-colors">お問い合わせ</a></li>
+            </ul>
+            <p class="text-[10px]">&copy; 2026 LUMINA Cosmetics. All Rights Reserved. (Fictional Concept)</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Header background on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-sm');
+                } else {
+                    header.classList.remove('shadow-sm');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
